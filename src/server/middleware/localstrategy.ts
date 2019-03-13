@@ -1,4 +1,3 @@
-
 import * as passport from 'passport';
 import * as LocalStrategy from 'passport-local';
 

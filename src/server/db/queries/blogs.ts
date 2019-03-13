@@ -2,9 +2,9 @@ import { Query } from "../index";
 
 const returnMyQuery = async (query: any, values?: any) => console.log(query, values);
 
-const getAll = async () => Query("SELECT b.*, u.firstname, u.lastname FROM blogs b JOIN users u ON u.id = b.authorid");
+const getAll = async () => Query("SELECT b.*, u.name  FROM blogs b JOIN users u ON u.id = b.authorid");
 
-const getSingleBlog = async (id: number) => Query(`SELECT b.*, u.firstname, u.lastname from Blogs b JOIN users u ON u.id = b.authorid WHERE b.id = ${id}`);
+const getSingleBlog = async (id: number) => Query(`SELECT b.*, u.name from Blogs b JOIN users u ON u.id = b.userid WHERE b.id = ${id}`);
 
 const postBlog = async (columns: string, values: any[]) => Query(`INSERT INTO blogs (${columns}) VALUE (?);`, values);
 

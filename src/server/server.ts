@@ -3,8 +3,8 @@ import * as express from 'express';
 import * as passport from 'passport';
 import * as cors from 'cors';
 
-import './middelware/localstrategy';
-import './middelware/bearerstrategy';
+import './middleware/localstrategy';
+import './middleware/bearerstrategy';
 
 import routes from './routes';
 
