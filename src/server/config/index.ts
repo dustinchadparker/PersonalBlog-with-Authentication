@@ -1,10 +1,2 @@
-export default {
+export default require('./${process.env.NODE_ENV}').default;
 
-    mysql: {
-        hos: 'localhost',
-        port: 3306,
-        user: 'blog',
-        database: 'blogs',
-        password: 'blahblah'
-    }
-}
